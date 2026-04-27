@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Logo from "./logo";
@@ -26,12 +26,12 @@ const Header: React.FC = () => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Function to handle scroll to set sticky class
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     setSticky(window.scrollY >= 80);
-  };
+  }, []);
 
   // Function to handle click outside
-  const handleClickOutside = (event: MouseEvent) => {
+  const handleClickOutside = useCallback((event: MouseEvent) => {
     if (signInRef.current && !signInRef.current.contains(event.target as Node)) {
       setIsSignInOpen(false);
     }
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
     if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node) && navbarOpen) {
       setNavbarOpen(false);
     }
-  };
+  }, [navbarOpen]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navbarOpen, isSignInOpen, isSignUpOpen]);
+  }, [handleScroll, handleClickOutside]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [pathUrl]);
+  }, [pathUrl, handleScroll]);
 
   useEffect(() => {
     const fetchData = async () => {

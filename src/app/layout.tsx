@@ -21,6 +21,7 @@ import Header from "./components/layout/header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://elbildad.com'),
   title: "Elbildad Services LTD | China-Nigeria Procurement & Sourcing",
   description: "Your trusted bridge for high-quality Chinese manufacturers and the Nigerian market. Factory prices, secure payments, and reliable delivery.",
   verification: {

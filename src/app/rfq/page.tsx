@@ -43,7 +43,7 @@ export default function RFQPage() {
                 Commitment Fee: ₦5,000
               </p>
               <p className="text-gray text-sm">
-                To ensure we dedicate our team’s time to serious requests only, we charge a non-refundable commitment fee of ₦5,000. This is fully refundable if we are unable to provide a quotation within 48 hours, or it will be deducted from your final service charge.
+                To ensure we dedicate our team&rsquo;s time to serious requests only, we charge a non-refundable commitment fee of ₦5,000. This is fully refundable if we are unable to provide a quotation within 48 hours, or it will be deducted from your final service charge.
               </p>
             </div>
 
