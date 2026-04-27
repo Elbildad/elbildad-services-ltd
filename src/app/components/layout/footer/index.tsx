@@ -36,10 +36,10 @@ const Footer = () => {
                 No. 117 Unguwar Wambai, Inna Plaza, Gwarzo Road, Kano, Nigeria
               </p>
               <div className="flex gap-4">
-                <Link href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray hover:bg-primary hover:text-white transition-all">
+                <Link href="https://web.facebook.com/theelbildadservices" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray hover:bg-primary hover:text-white transition-all">
                   <Icon icon="ion:logo-facebook" className="text-xl" />
                 </Link>
-                <Link href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray hover:bg-primary hover:text-white transition-all">
+                <Link href="https://www.instagram.com/elbildadservices" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray hover:bg-primary hover:text-white transition-all">
                   <Icon icon="ion:logo-instagram" className="text-xl" />
                 </Link>
                 <Link href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray hover:bg-primary hover:text-white transition-all">
