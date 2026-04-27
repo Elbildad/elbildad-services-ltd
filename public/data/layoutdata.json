@@ -1,0 +1,19 @@
+{
+  "headerData": [
+    { "label": "Home", "href": "/" },
+    {
+      "label": "Services",
+      "href": "/#services",
+      "submenu": [
+        { "label": "Procurement & Sourcing", "href": "/#services" },
+        { "label": "Supplier Vetting", "href": "/#services" },
+        { "label": "Cross-Border Payments", "href": "/#services" },
+        { "label": "Visa & Study in China", "href": "/#services" },
+        { "label": "Business Development", "href": "/#services" }
+      ]
+    },
+    { "label": "RFQ", "href": "/rfq" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}
+
